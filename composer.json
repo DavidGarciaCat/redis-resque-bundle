@@ -1,0 +1,33 @@
+{
+    "name": "david-garcia/redis-resque-bundle",
+    "description": "The Redis Resque Bundle provides integration between Symfony and Redis",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Garcia",
+            "email": "me@davidgarcia.cat"
+        }
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.5,<8.0",
+        "symfony/framework-bundle": "^2.8|^3.0|^4.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8|^5.7|^6.5|^7.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "DavidGarcia\\RedisResqueBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DavidGarcia\\Tests\\RedisResqueBundle\\": "tests/"
+        }
+    }
+}
