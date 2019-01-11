@@ -1,0 +1,22 @@
+version: '3.1'
+
+services:
+
+  php:
+    container_name: redis-resque-bundle-php
+    build:
+      context: ./docker/config/php
+    ports:
+      - 9000:9000
+    working_dir: /application
+    volumes:
+      - .:/application
+      - ./docker/config/php/php.ini:/usr/local/etc/php/conf.d/docker-php-zzz-overrides.ini # PHP Client
+
+  redis:
+    container_name: redis-resque-bundle-redis
+    build:
+      context: ./docker/config/redis
+    ports:
+      - 6379:6379
+    working_dir: /application
